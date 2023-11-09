@@ -22,7 +22,7 @@ As the promise resolves to an `ArrayBuffer`, you will need to read the data usin
 ```js
 const hashValue = val =>
   crypto.subtle
-    .digest('SHA-256', new TextEncoder('utf-8').encode(val))
+    .digest('SHA-256', new TextEncoder().encode(val))
     .then(h => {
       let hexes = [],
         view = new DataView(h);
